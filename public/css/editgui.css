@@ -1,0 +1,21 @@
+.uk-subnav-pill * :first-child {
+    color: darkslategrey;
+}
+
+.uk-subnav-pill .uk-active a {
+    background-color: #a0583c;
+}
+
+.btn-dark {
+    background-color: #231f20;
+    border-color: #231f20;
+    border-radius: 12px;
+}
+
+/* .uk-card {
+    border-radius: 15px;
+}
+
+.uk-card-media-top {
+    border-radius: 15px 15px 0 0;
+} */
