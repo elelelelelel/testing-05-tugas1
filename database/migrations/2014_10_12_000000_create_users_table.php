@@ -14,13 +14,24 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id('id_admin');
-            $table->string('name');
+            $table->engine = 'ndbcluster';
+            $table->bigIncrements('id');
+            $table->string('first_name');
+            $table->string('last_name');
             $table->string('email')->unique();
-            $table->string('username')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('verified_token');
             $table->rememberToken();
+            $table->string('avatar')->nullable();
+            $table->string('gender')->default('Male');
+            $table->string('phone');
+            $table->string('university');
+            $table->string('majority');
+            $table->string('job');
+            $table->string('google_scholar_url', 255)->nullable();
+            $table->string('scopus_url', 255)->nullable();
+            $table->string('sinta_url', 255)->nullable();
             $table->timestamps();
         });
     }
